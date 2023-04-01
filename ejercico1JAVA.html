@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+	<meta charset="UTF-8">
+	<title>Ejercicio 1-JavaScript</title>
+</head>
+<body>
+	<h1>Ejercicios JavaScript</h1>
+	<p>Para ser bueno en JavaScript, debemos practicar y practicar, para tener un buen dominio de los diferentes Scripts que se pueden presentar.</p>
+	<hr color="IndianRed">
+	<h1>Calcular el perímetro de un triángulo</h1>
+	<p>Escriba la distanccia del lado A: </p>
+	<input id="ladoA">
+	<p>Escriba la distancia del lado B: </p>
+	<input id="ladoB">
+	<p>Escriba la distancia del lado C: </p>
+	<input id="ladoC">
+	<br><br>
+	<button type="button" onclick="miFuncion1()">Calcular</button>
+	<p id="resultado1"></p>
+
+	<script>
+		function miFuncion1(){
+		var x, y, z, sumPerimetro, resultadoFinal1;
+		x=document.getElementById("ladoA").value;
+		y=document.getElementById("ladoB").value;
+		z=document.getElementById("ladoC").value;
+		if (isNaN(x) || isNaN(y) || isNaN(z)){
+			resultadoFinal1= "Por favor, ingrese datos válidos.";
+		}else{
+			//si no ponemos parseFloat concatenaría x con y con z
+			sumPerimetro=parseFloat(x) + parseFloat(y) + parseFloat(z);
+			resultadoFinal1="El perímetro del triángulo es: " + sumPerimetro;
+		}
+		document.getElementById("resultado1").innerHTML=resultadoFinal1;
+		}
+	</script>
+
+	<hr color="IndianRed">
+	<h1>Calcular el área de un triángulo</h1>
+	<p>Escriba la base: </p>
+	<input type="text" id="base">
+	<p>Escriba la altura: </p>
+	<input id="altura">
+	<br><br>
+	<button type="button" onclick="miFuncion2()">Calcular</button>
+	<p id="resultado2"></p>
+	<script>
+		function miFuncion2(){
+			var a, b, area, resultadoFinal2;
+			a=document.getElementById("base").value;
+			b=document.getElementById("altura").value;
+			if (isNaN(a) || isNaN(b)){
+				resultadoFinal2= "Por favor, ingrese datos válidos.";
+			}else{
+				area=(parseFloat(a) * parseFloat(b))/2;
+				resultadoFinal2="El área del triángulo es: " + area;
+			}
+			document.getElementById("resultado2").innerHTML=resultadoFinal2;
+		}
+	</script>
+
+	<hr color="IndianRed">
+	<h1>Calcular el perímetro de un rectángulo</h1>
+	<p>Escriba la base: </p>
+	<input id="base1">
+	<p>Escriba la altura: </p>
+	<input id="altura1">
+	<br><br>
+	<button type="button" onclick="miFuncion3()">Calcular</button>
+	<p id="resultado3"></p>
+	<script>
+		function miFuncion3(){
+			var c, d, perimetro3, resultadoFinal3;
+			c=document.getElementById("base1").value;
+			d=document.getElementById("altura1").value;
+			if (isNaN(c) || isNaN(d)){
+				resultadoFinal3="Por favor, ingrese datos válidos";
+			}else{
+				perimetro3=2*(parseFloat(c)+parseFloat(d));
+				resultadoFinal3="El perímetro del rectángulo es: " + perimetro3;
+			}
+			document.getElementById("resultado3").innerHTML=resultadoFinal3;
+		}
+	</script>
+
+	<hr color="IndianRed">
+	<h1>Calcular el área de un rectángulo</h1>
+	<p>Escriba la base: </p>
+	<input id="base2">
+	<p>Escriba la altura: </p>
+	<input id="altura2">
+	<br><br>
+	<button type="button" onclick="miFuncion4()">Calcular</button>
+	<p id="resultado4"></p>
+	<script>
+		function miFuncion4(){
+			var e,f, area4, resultadoFinal4;
+			e=document.getElementById("base2").value;
+			f=document.getElementById("altura2").value;
+			if (isNaN(e) || isNaN(f)){
+				resultadoFinal4="Por favor, ingrese datos válidos";
+			}else{
+				area4=parseFloat(e)+parseFloat(f);
+				resultadoFinal4= "El área del rectángulo es= "+ area4;
+			}
+			document.getElementById("resultado4").innerHTML=resultadoFinal4;
+			}
+		</script>
+
+		<hr color="IndianRed">
+		<h1>Calcular el perímetro de un cuadrado</h1>
+		<p>Escriba la altura: </p>
+		<input id="altura3">
+		<br><br>
+		<button type="button" onclick="miFuncion5()">Calcular</button>
+		<p id="resultado5"></p>
+		<script>
+			function miFuncion5(){
+				var g, perimetro4, resultadoFinal5;
+				g=document.getElementById("altura3").value;
+				if(isNaN(g)){
+					resultadoFinal5="Por favor, ingrese datos válidos";
+				}else{
+					perimetro4=parseFloat(g) * 4;
+					resultadoFinal5= "El perímetro del cuadrado es: " + perimetro4;
+				}
+				document.getElementById("resultado5").innerHTML=resultadoFinal5;			
+			}
+		</script>
+
+		<hr color="IndianRed">
+		<h1>Calcular el área de un cuadrado</h1>
+		<p>Escriba la altura: </p>
+		<input id="altura4">
+		<br><br>
+		<button type="button" onclick="miFuncion6()">Calcular</button>
+		<p id="resultado6"></p>
+		<script>
+			function miFuncion6(){
+				var h, area5, resultadoFinal6;
+				h=document.getElementById("altura4").value;
+				if (isNaN(h)){
+					resultadoFinal6="Por favor, ingrese datos válidos";
+				}else{
+					area5=parseFloat(h)**2;
+					resultadoFinal6= "El área del cuadrado es: " + area5;
+				}
+				document.getElementById("resultado6").innerHTML=resultadoFinal6;
+			}
+		</script>
+
+		<hr color="IndianRed">
+		<h1>Calcular el perímetro de un círculo</h1>
+		<p>Escriba el radio: </p>
+		<input id="radio1">
+		<br><br>
+		<button type="button" onclick="miFuncion7()">Calcular</button>
+		<p id="resultado7"></p>
+		<script>
+			function miFuncion7(){
+				var i, perimetro5, resultadoFinal7;
+				i=document.getElementById("radio").value;
+				if(isNaN(i)){
+				resultadoFinal7="Por favor, ingrese datos válidos";
+				}else{
+				perimetro5=2 * 3.1416 * (parseFloat(i) ** 2);
+				resultadoFinal7="El perímetro del círculo es: " + perimetro5;
+				}
+				document.getElementById("resultado7").innerHTML=resultadoFinal7;
+				}
+		</script>
+
+		<hr color="IndianRed">
+		<h1>Calcular el área de un círculo</h1>
+		<p>Escriba el radio: </p>
+		<input id="radio2">
+		<br><br>
+		<button type="button" onclick="miFuncion8()">Calcular</button>
+		<p id="resultado8"></p>
+		<script>
+			function miFuncion8(){
+				var j, area6, resultadoFinal8;
+				j=document.getElementById("radio2").value;
+				if(isNaN(j)){
+				resultadoFinal8= "Por favor, ingrese datos válidos";
+				}else{
+				area6=3.1416 * (parseFloat(j) ** 2);
+				resultadoFinal8="El perímetro del círculo es: " + area6;
+				}
+				document.getElementById("resultado8").innerHTML=resultadoFinal8;
+			}
+			</script>
+</body>
+</html>
+
+
+
+
+	
